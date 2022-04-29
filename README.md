@@ -26,6 +26,8 @@ There are many methods of face detector but we focus on Dlib's method.  Like, Op
 
 The 68 point stored in pts file and pic with detection on main points on face
 
-![image2](https://raw.githubusercontent.com/Visit-Egypt/AI-Face_LandMark_Detection/main/image.jpg?token=GHSAT0AAAAAABRI6JN3UPURY4QY5BUDH4P6YTMMUWA)
 
 [Pts file](https://github.com/Visit-Egypt/AI-Face_LandMark_Detection/blob/main/shape_predictor_68_face_landmarks.dat)
+
+![image2](https://raw.githubusercontent.com/Visit-Egypt/AI-Face_LandMark_Detection/main/image.jpg?token=GHSAT0AAAAAABRI6JN3UPURY4QY5BUDH4P6YTMMUWA)
+
