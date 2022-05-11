@@ -29,5 +29,5 @@ The 68 point stored in pts file and pic with detection on main points on face
 
 [Pts file](https://github.com/Visit-Egypt/AI-Face_LandMark_Detection/blob/main/shape_predictor_68_face_landmarks.dat)
 
-![image2](https://raw.githubusercontent.com/Visit-Egypt/AI-Face_LandMark_Detection/main/image.jpg?token=GHSAT0AAAAAABRI6JN3UPURY4QY5BUDH4P6YTMMUWA)
+![image](https://user-images.githubusercontent.com/55753782/167912546-e9960185-fa5f-477e-874e-4617336a0f61.jpg)
 
