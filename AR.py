@@ -5,12 +5,17 @@ from facePoints import facePoints
 
 
 def writeFaceLandmarksToLocalFile(faceLandmarks, fileName):
-    with open(fileName, 'w') as f:
+    with open(fileName, 'a') as f:
         for p in faceLandmarks.parts():
             f.write("%s %s\n" % (int(p.x), int(p.y)))
 
     f.close()
-
+def writeVersion(marks,fileName):
+    with open(fileName,'w') as f :
+        for p  in marks.split(',') :
+            f.write(p)
+            f.write('\n')
+marks  = "version: 1,n_points:  68,{"
 
 Model_PATH = "shape_predictor_68_face_landmarks.dat"
 
@@ -24,7 +29,8 @@ img = cv2.imread(image)
 imageRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 faceLandmarksOuput = "output/image"
-
+fileName = faceLandmarksOuput + ".pts"
+writeVersion(marks, fileName)
 allFaces = frontalFaceDetector(imageRGB, 0)
 
 print("List of all faces detected: ", len(allFaces))
@@ -33,6 +39,7 @@ allFacesLandmark = []
 
 
 for k in range(0, len(allFaces)):
+    
     faceRectangleDlib = dlib.rectangle(int(allFaces[k].left()), int(allFaces[k].top()),
                                        int(allFaces[k].right()), int(allFaces[k].bottom()))
 
@@ -45,8 +52,6 @@ for k in range(0, len(allFaces)):
 
     facePoints(img, detectedLandmarks)
 
-    fileName = faceLandmarksOuput + "_16"  + ".pts"
-    print("Lanmdark is save into ", fileName)
 
     writeFaceLandmarksToLocalFile(detectedLandmarks, fileName)
 
